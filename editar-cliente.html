@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="contenido-pagina">
+        <aside class="aside">
+            <div class="contenido">
+                <h1 class="title-aside">IndexedDB</h1>
+                <div class="opciones">
+                    <h3>Home</h3>
+                    <a href="index.html" class="btn-opciones">Clientes</a>
+                    <a href="nuevo-cliente.html" class="btn-opciones">Nuevo Cliente</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-nuevo-cliente">
+            <form action="" id="formulario">
+                <fieldset>
+                    <h2>Editar Cliente</h2>
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono">
+                    </div>
+                    <input type="submit" class="btn" value="Editar Cliente">
+                </fieldset>
+            </form>
+            <div class="alerta"></div>
+        </main>
+    </div>
+    
+    <script src="js/editar-cliente.js"></script>
+</body>
+</html>

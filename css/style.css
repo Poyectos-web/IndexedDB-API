@@ -1,0 +1,331 @@
+:root {
+    --primario: #222738;
+    --secundario: #151824;
+    --gris: #8A92A6;
+    --azul: #3A57E8;
+    --blanco: #FFF;
+    --delt: #c03221;
+    --edit: #1AA053;
+    --colorTablas: #d3d3d3;
+
+    --fuente: 'Inter', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--secundario);
+}
+a {
+    text-decoration: none;
+}
+
+
+/* Aside */
+@media (min-width: 992px) { 
+    .contenido-pagina {
+        display: flex;
+        align-items: center;
+    }
+} 
+.aside {
+    background-color: var(--primario);
+    padding: 5rem;
+}
+@media (min-width: 992px) { 
+    .aside {
+        height: 100vh;
+        max-width: 36rem;
+        width: 30%;
+    }
+} 
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-aside {
+    color: var(--blanco);
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 3.3rem;
+}
+
+.opciones {
+    width: 100%;
+}
+
+.opciones h3 {
+    color: #adb5bd;
+    font-weight: 600;
+    border-bottom: 1px solid var(--gris);
+}
+
+.opciones a{
+    color: var(--gris);
+    font-weight: 400;
+    display: block;
+    padding: 1rem 2rem;
+    transition: all .3s;
+}
+.opciones a:hover {
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: .4rem;
+    box-shadow: 0 .2rem .4rem rgb(138, 146, 166, 0.3);
+}
+.opciones a svg {
+    color: var(--gris);
+    width: 3rem;
+}
+
+.bg-gray-100 {
+    background-color: var(--gris);
+}
+
+/* Tabla Clientes */
+
+table {
+    border-spacing: 0;
+}
+
+.tabla-clientes {
+    margin: 5rem auto;
+    max-width: 120rem;
+    width: 90%;
+}
+@media (min-width: 768px) { 
+    .tabla-clientes {
+        width: 60%;
+    }
+} 
+
+.encabezado-tabla {
+    background-color: var(--primario);
+    padding: 1rem 3rem;
+    margin: 2rem auto;
+    border-radius: .8rem;
+}
+@media (min-width: 992px) { 
+    .encabezado-tabla {
+        margin: 0;
+        border-radius: .8rem .8rem 0 0;
+    }
+} 
+.encabezado-tabla h2 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--colorTablas);
+}
+
+.main table {
+    width: 100%;
+}
+
+.main thead {
+    display: none;
+}
+@media (min-width: 992px) { 
+    .main thead {
+        display: table-header-group;
+    }
+} 
+
+@media (min-width: 992px) { 
+    .main th {
+        font-weight: 500;
+        color: var(--gris);
+        padding: 1rem;
+    }
+} 
+
+.listado-clientes tr {
+    margin-bottom: 5rem;
+    display: block;
+}
+@media (min-width: 992px) { 
+    .listado-clientes tr {
+        display: table-row;
+        border: none;
+        margin: 0;
+    }
+} 
+
+.listado-clientes td{
+    color: var(--colorTablas);
+    font-weight: 400;
+    padding: 2rem 1rem;
+    display: block;
+    text-align: right;
+}
+@media (min-width: 992px) { 
+    .listado-clientes td {
+        display: table-cell;
+        text-align: center;
+    }
+} 
+
+.listado-clientes td:first-child {
+    border-radius: .8rem .8rem 0 0 ;
+}
+.listado-clientes td:last-child {
+    border-radius: 0 0 .8rem .8rem;
+}
+@media (min-width: 992px) { 
+    .listado-clientes td:first-child {
+        border-radius: 0;
+    }
+    .listado-clientes td:last-child {
+        border-radius: 0;
+    }
+} 
+
+
+.listado-clientes td:nth-child(2n+1) {
+    background-color: var(--primario);
+}
+.listado-clientes td:nth-child(2n) {
+    background-color: #252b3b;
+}
+@media (min-width: 992px) { 
+    .listado-clientes td:nth-child(2n+1) {
+        background-color: transparent;
+    }
+    .listado-clientes td:nth-child(2n) {
+        background-color: transparent;
+    }
+
+    .listado-clientes tr:nth-child(2n+1) {
+        background-color: var(--primario);
+    }
+    .listado-clientes tr:nth-child(2n) {
+        background-color: #252b3b;
+    }
+} 
+
+.listado-clientes td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 500;
+    color: var(--gris);
+}
+@media (min-width: 992px) { 
+    .listado-clientes td::before {
+        display: none;
+    }
+} 
+
+
+.acciones a {
+    color: var(--blanco);
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+}
+
+.acciones .eliminar {
+    background-color: var(--delt);
+}
+
+.acciones .editar {
+    background-color: var(--edit);
+}
+
+
+/* Nuevo Cliente */
+/* Formulario */
+
+.main-nuevo-cliente {
+    width: 100%;
+}
+
+form {
+    margin: 5rem auto 0 auto;
+    background-color: var(--primario);
+    max-width: 56.6rem;
+    width: 90%;
+    border-radius: 2.5rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h2 {
+    color: var(--blanco);
+    margin: 5rem 0;
+    font-weight: 600;
+    font-size: 3.3rem;
+}
+
+.campo {
+    color: var(--gris);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+.campo:last-of-type {
+    margin-bottom: 0;
+}
+
+.campo label {
+    margin-bottom: 1rem;
+}
+
+.campo input {
+    padding: 1rem;
+    border: none;
+    border-radius: .4rem;
+}
+.campo input:focus {
+    outline: 2px solid var(--azul);
+}
+
+.btn {
+    border: 1px solid var(--azul);
+    background-color: transparent;
+    color: var(--blanco);
+    border-radius: .4rem;
+    padding: 1rem 2.5rem;
+    transition: all .3s;
+    cursor: pointer;
+    margin: 4rem 0;
+}
+.btn:hover {
+    box-shadow: 0 .2rem .4rem rgb(138, 146, 166, 0.3);
+    background-color: var(--azul);
+}
+
+/* Alertas */
+.mensaje {
+    text-align: center;
+    padding: 1rem 2rem;
+    max-width: 56.6rem;
+    width: 90%;
+    margin: 2rem auto 4rem auto;
+}
+
+.error {
+    color: var(--delt);
+    background-color: rgb(192,50,33,0.2);
+    border: 1px solid var(--delt);
+}
+
+.success {
+    color: var(--edit);
+    background-color: rgb(26,160,83,0.2);
+    border: 1px solid var(--edit);
+}
